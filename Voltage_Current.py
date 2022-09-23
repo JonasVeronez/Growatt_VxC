@@ -13,12 +13,12 @@ def requeste(page):
     mes = '09'
     ano = '2022'
     page = str(page)
-    device_sn = 'MJG0A3001R'	
+    device_sn = ''	
 
     url = ('http://server.growatt.com/v1/device/tlx/tlx_data?tlx_sn='+device_sn+'&start_date='+ano+'-'+mes+'-'+dia+'&end_date='+ano+'-'+mes+'-'+dia+'&page='+page+'&perpage=100')
 
     header = {'Accept': 'application/json',
-                'token': 'd9bdc30b71e97c6a38320b39450bcf2b'}
+                'token': ''}
 
     resposta = requests.post(url, headers=header)
     objeto=  json.loads(resposta.text)
